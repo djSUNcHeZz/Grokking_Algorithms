@@ -15,5 +15,13 @@ infinity = float('inf')  # бесконечность
 costs = {'a': 6, 'b': 2, 'fin': infinity}  # стоимости обновляются в процессе
 parents = {'a': 'start', 'b': 'start', 'fin': None}  # родители узла обновляются в процессе
 
-
 print(graph.keys())
+print(graph.values())
+print(graph.items())
+print(graph.get('start'))
+print(graph.items())
+print(graph.pop('start'))
+print(graph.items())
+print('a' in graph)
+
+# print(graph.keys())
