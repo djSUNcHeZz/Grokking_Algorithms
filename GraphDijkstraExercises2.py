@@ -1,11 +1,9 @@
-# Dijkstra graph search algorithm (exercises A)
+# Dijkstra graph search algorithm (exercises B)
 
-graph = {'start': {'a': 5, 'b': 2}, 'a': {'c': 4, 'd': 2}, 'b': {'a': 8, 'd': 7}, 'c': {'d': 6, 'fin': 3},
-         'd': {'fin': 8}, 'fin': {}}
+graph = {'start': {'a': 10}, 'a': {'b': 20}, 'b': {'c': 1, 'fin': 30}, 'c': {'a': 1}, 'fin': {}}
 infinity = float('inf')
-parents = {'a': 'start', 'b': 'start', 'fin': None}
-costs = {'a': graph['start']['a'], 'b': graph['start']['b'], 'c': infinity, 'd': infinity,
-         'fin': infinity}
+parents = {'a': 'start', 'fin': None}
+costs = {'a': graph['start']['a'], 'b': infinity, 'c': infinity, 'd': infinity, 'fin': infinity}
 
 
 def find_lowest_cost_node(costs):
