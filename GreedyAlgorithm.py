@@ -9,11 +9,11 @@ while states_needed:
     best_station = None
     states_covered = set()
     for station, states in stations.items():
-        covered = states_needed & states
-        if len(covered) > len(states_covered):
+        covered = states_needed & states  # выводим только штаты которые есть в ОБОИХ сетах
+        if len(covered) > len(states_covered):  # проверяем количество штатов
             best_station = station
             states_covered = covered
-    states_needed -= states_covered
+    states_needed -= states_covered   # удаляем найденные штаты из поиска
     final_stations.add(best_station)
 
 print(stations.items())
